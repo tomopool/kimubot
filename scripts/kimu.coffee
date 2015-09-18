@@ -19,10 +19,3 @@ module.exports = (robot) ->
     msg.send "今やれ"
   robot.hear /あとでやる/, (msg) ->
     msg.send "今やれ"
-  new cronJob
-    cronTime: "50 * * * * *"
-    onTick: ->
-      robot.send {room: "general"}, "kimubot img me しおりん"
-      return
-    start: true
-    timeZone: "Asia/Tokyo"
